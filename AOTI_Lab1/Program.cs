@@ -8,13 +8,16 @@ namespace AOTI_Lab1
         static void Main(string[] args)
         {
             SimpleRegexTokenizer t = new SimpleRegexTokenizer();
-            IEnumerable<OutputToken> list = t.Tokenize("for (int i<=0; i<3; i+=1){kfnvkd/vfl;zd  sdlvmkdfv sksdlv}");
+            IEnumerable<OutputToken> list = t.Tokenize("for (qwe[1] = 0; qwe[1]<5; qwe[1]+=1){ int v = 9; }");
             foreach(OutputToken toc in list)
             {
                 Console.WriteLine(toc.Value+"   "+toc.TokenType.ToString());
 
             }
-            Console.WriteLine("Hello World!");
+            Queue<OutputToken> q = new Queue<OutputToken>(list);
+            SyntaxAnalizer s = new SyntaxAnalizer();
+            s.Analize(q);
+            s.PrintTree();
         }
     }
     public enum TokenType
@@ -42,7 +45,10 @@ namespace AOTI_Lab1
         OpenBrace,
         CloseBrace,
         SequenceTerminator,
-        Invalid
+        Invalid,
+        Increment,
+        IsEqual,
+        NotEqual
 
 
     }

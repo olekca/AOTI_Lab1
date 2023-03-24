@@ -23,20 +23,24 @@ namespace AOTI_Lab1
             _tokenDefinitions.Add(new TokenDefinition(TokenType.Int, "^int"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.Float, "^float"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.Double, "^double"));
-            _tokenDefinitions.Add(new TokenDefinition(TokenType.Var, "^[a-zA-Z][a-zA-Z0-9]*"));
-            _tokenDefinitions.Add(new TokenDefinition(TokenType.Equals, "^="));
-            _tokenDefinitions.Add(new TokenDefinition(TokenType.IntNumber, "^[0-9]+"));
-            _tokenDefinitions.Add(new TokenDefinition(TokenType.FloatNumber, "^[+-]?([1-9]*[.])?[0-9]+"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.ArrayElement, "^[a-zA-Z][a-zA-Z0-9]*\\[[1-9][0-9]*\\]"));
+            _tokenDefinitions.Add(new TokenDefinition(TokenType.Var, "^[a-zA-Z][a-zA-Z0-9]*"));
+            _tokenDefinitions.Add(new TokenDefinition(TokenType.IsEqual, "^=="));
+            _tokenDefinitions.Add(new TokenDefinition(TokenType.NotEqual, "^!="));
+            _tokenDefinitions.Add(new TokenDefinition(TokenType.Equals, "^="));           
+            _tokenDefinitions.Add(new TokenDefinition(TokenType.FloatNumber, "^[+-]?([0-9]*[.])[0-9]+"));
+            _tokenDefinitions.Add(new TokenDefinition(TokenType.IntNumber, "^[0-9]+"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.Semicolon, "^;"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.LessOrEven, "^>="));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.GreaterOrEven, "^<="));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.LessThan, "^<"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.GreaterThan, "^>"));
+            _tokenDefinitions.Add(new TokenDefinition(TokenType.Increment, "^\\+\\+"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.Plus, "^\\+"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.Minus, "^-"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.Multiply, "^\\*"));
             _tokenDefinitions.Add(new TokenDefinition(TokenType.Divide, "^/"));
+            
         }
 
 
